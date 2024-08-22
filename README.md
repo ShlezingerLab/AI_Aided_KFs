@@ -18,7 +18,7 @@ The following filters and techniques are implemented in this repository:
 
 The repository is organized as follows:
 
-- `dataset/`: the common dataset of the observations and ground truth.
+- `dataset/`: the public dataset of the observations and ground truth.
 - `figs/`: simulation and experiment results.
 - `RTSNet_IL/, DANSE_KTH, APBM_NU_CZ`: the codes of implementation for the algorithm indicated by the folder name.
 
@@ -38,7 +38,7 @@ This work is a collaborative effort by researchers from:
 
 ## Citation
 
-For more details or to cite this work, plaese refer to the paper:
+For more details or to cite this work, please refer to the paper:  
 	```
      TBD
     ```
