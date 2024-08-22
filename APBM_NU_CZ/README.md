@@ -1,6 +1,8 @@
 ## Augmented Physics-Based Model (APBM)
 
-APBM is designed to compensate for discrepancies between the true dynamics of a system and an approximate or partially-known model. In this project, we specifically address the challenge where the first state dynamics of the Lorenz Attractor is missing and considered as a random walk. To overcome this, a data-driven AI component, implemented using a Multiple Layer Perceptron (MLP), is employed to learn and approximate the true dynamics.
+APBM is designed to compensate for discrepancies between the true dynamics of a system and an approximate or partially-known model.   
+
+In this project, we specifically address the challenge where the first state dynamics of the Lorenz Attractor is missing and considered as a random walk. To overcome this, a data-driven AI component, implemented using a Multiple Layer Perceptron (MLP), is employed to learn and approximate the true dynamics.
 
 ### Implementation Details
 
