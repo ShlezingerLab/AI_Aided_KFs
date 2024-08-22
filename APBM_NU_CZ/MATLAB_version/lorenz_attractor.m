@@ -151,7 +151,7 @@ for i_data = 1:n_data % loop for datasets
     x = reshape(x, x_dim, n_track);
     % filtering 
     for i_track = 1:n_track % loop for time steps
-        for i_filter = 1:n_filter % loop for filters
+        parfor i_filter = 1:n_filter % loop for filters
             % extract measurement
             y = y_data(i_data, :, i_track)';
             [xCorr,pCorr,xPred,pPred] = filters.step{i_filter}(filters.filter{i_filter},...
