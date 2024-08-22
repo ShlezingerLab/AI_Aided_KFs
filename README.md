@@ -38,7 +38,7 @@ This work is a collaborative effort by researchers from:
 
 ## Citation
 
-For more details or to cite this work, plaese refer to the paper:
+For more details or to cite this work, please refer to the paper:  
 	```
      TBD
     ```
