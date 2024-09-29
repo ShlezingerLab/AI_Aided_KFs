@@ -6,7 +6,7 @@ class MLP(nn.Module):
     def __init__(self, input_size, hidden_sizes, output_size):
         super(MLP, self).__init__()
 
-        torch.manual_seed(1)
+        torch.manual_seed(5)
         # Define layers based on input, hidden, and output sizes
         layer_sizes = [input_size] + hidden_sizes + [output_size]
         self.layers = nn.ModuleList()
@@ -14,17 +14,18 @@ class MLP(nn.Module):
         for i in range(len(layer_sizes) - 1):
             layer = nn.Linear(layer_sizes[i], layer_sizes[i + 1])
             # Initialize weights and biases randomly
-            nn.init.normal_(layer.weight, mean=0.0, std=1.0)
-            nn.init.normal_(layer.bias, mean=0.0, std=1.0)
+            nn.init.zeros_(layer.weight)
+            nn.init.zeros_(layer.bias)
+            # nn.init.normal_(layer.weight, mean=0.0, std=0.1)
+            # nn.init.normal_(layer.bias, mean=0.0, std=0.1)
             self.layers.append(layer)
 
     def forward(self, x):
         """Compute the output with given input."""
-        with torch.no_grad():
-            for i, layer in enumerate(self.layers):
-                x = layer(x)
-                if i < len(self.layers) - 1:  # Apply ReLU activation for all but the last layer
-                    x = torch.relu(x)
+        for i, layer in enumerate(self.layers):
+            x = layer(x)
+            if i < len(self.layers) - 1:  # Apply ReLU activation for all but the last layer
+                x = torch.relu(x)
         return x
 
     def get_num_parameters(self):

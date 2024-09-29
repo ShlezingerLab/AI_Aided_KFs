@@ -28,3 +28,4 @@ Both implementations aim to demonstrate how the combination of physics-based mod
 The library `filterpy` is for CKF implementation.
 
 The `filterpy` library is used specifically for the implementation of the Cubature Kalman Filter (CKF). For more information and installation instructions, please refer to the [filterpy GitHub repository](http://github.com/rlabbe/filterpy).
+
