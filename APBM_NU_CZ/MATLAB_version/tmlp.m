@@ -38,16 +38,16 @@ classdef tmlp < handle
             obj.Ws = cell(obj.nlayers,1);
             obj.Wshapes = cell(obj.nlayers,1);
             obj.bs= cell(obj.nlayers,1);
-            obj.Ws{1} = r * randn(hidden_layer_sizes(1), input_dim);
-            obj.bs{1} = r * randn;
+            obj.Ws{1} = r * zeros(hidden_layer_sizes(1), input_dim);
+            obj.bs{1} = r * 0;
             obj.Wshapes{1} = [hidden_layer_sizes(1), input_dim];
             for i=2:obj.nlayers-1
-                obj.Ws{i} = r * randn(hidden_layer_sizes(i), hidden_layer_sizes(i-1));
-                obj.bs{i} = r * randn;
+                obj.Ws{i} = r * zeros(hidden_layer_sizes(i), hidden_layer_sizes(i-1));
+                obj.bs{i} = r * 0;
                 obj.Wshapes{i} = [hidden_layer_sizes(i), hidden_layer_sizes(i-1)];
             end
-            obj.Ws{end} = r * randn(output_dim, hidden_layer_sizes(end));
-            obj.bs{end} = r * randn;
+            obj.Ws{end} = r * zeros(output_dim, hidden_layer_sizes(end));
+            obj.bs{end} = r * 0;
             obj.Wshapes{end} = [output_dim, hidden_layer_sizes(end)];
         end        
         
