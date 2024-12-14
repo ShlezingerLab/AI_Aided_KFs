@@ -29,11 +29,11 @@ To get started with this project, clone the repository and follow the instructio
 
 This work is a collaborative effort by researchers from:
 
-- Ben-Gurion University
-- ETH Zürich
-- KTH Royal Institute of Technology
-- University of West Bohemia
-- Northeastern University
+- Ben-Gurion University, Israel
+- ETH Zürich, Switzerland
+- KTH Royal Institute of Technology, Sweden
+- University of West Bohemia, Czechia
+- Northeastern University, USA
 
 ## Citation
 
