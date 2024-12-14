@@ -7,7 +7,6 @@ This repository contains the implementation and comparison of AI-aided Kalman fi
 The following filters and techniques are implemented in this repository:
 
 - **Extended Kalman Filter (EKF)** 
-- **Cubature Kalman Filter (CKF)** 
 - **Particle Filter (PF)** 
 - **KalmanNet:** an interpretable, low complexity, and data-efficient DNN-aided real-time state estimator by learning the Kalman gain.
 - **RTSNet:** an iterative hybrid model-based/data-driven algorithm for smoothing in dynamical systems.
