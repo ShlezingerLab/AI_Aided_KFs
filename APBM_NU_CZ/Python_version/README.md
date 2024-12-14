@@ -28,8 +28,11 @@ The supervised version is written in Python because neural network (NN) training
 - Similar to the above, but the built-in fully connected NN from `nn.Sequential` is replaced with a self-defined MLP in `tmlp.py`.
 - This offers more flexibility for tuning parameters and monitoring the training process.
 
+### Pre-trained Model
+- During training, the `train_flag` is set to `False` by default, loading the pre-trained NN parameters from `fcnn_parameter_shuffle.pt` or `mlp_parameter.pt`. To train your own NN, set `train_flag` to `True` and ensure the training settings are properly configured.
+
 ## Attention
 
 - Required libraries: `numpy`, `torch`, `pandas`, `filterpy`.
 - The `filterpy` library is specifically used for the Cubature Kalman Filter (CKF) implementation. For more details and installation instructions, visit the [filterpy GitHub repository](http://github.com/rlabbe/filterpy).
-- During training, the `train_flag` is set to `False` by default, loading the pre-trained NN parameters from `fcnn_parameter_shuffle.pt` or `mlp_parameter.pt`. To train your own NN, set `train_flag` to `True` and ensure the training settings are properly configured.
+

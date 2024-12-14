@@ -13,14 +13,20 @@ The APBM is implemented in two versions with different environment requirements:
   - Required Toolboxes:
     - `Sensor Fusion and Tracking Toolbox`
     - `Parallel Computing Toolbox`
+  - Training:
+	- Offline Unsupervised: Trained by the measuerments of training data (without true state)
+	- Online Unsupervised: Trained by the measuerments of test data (without true state)
 
 - **Python:**
   - Version: `>= 3.7`
   - Required Packages:
-    - `numpy`
-    - `torch`
-    - `pandas`
-	- `filterpy`
+    - `numpy >= 1.26.4`
+    - `torch >= 2.4.0`
+    - `pandas >= 2.2.2`
+	- `filterpy >= 1.4.5`
+  - Training:
+	- Offline Supervised: Trained by the true states of training data
+	- Online Unsupervised: Trained by the measuerments of test data (without true state)
 
 Both implementations aim to demonstrate how the combination of physics-based models with AI-driven components can effectively estimate the system's true state, even when part of the dynamics is unknown or approximated.
 

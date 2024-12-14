@@ -23,8 +23,11 @@ The unsupervised version is written in MATLAB because nonlinear filtering toolbo
 - After filtering through the training datasets, the NN parameters are saved and used for test data.
 - During testing, the APBM can either remain fixed or continue evolving.
 
+### Pre-trained Model
+- In the training process, the `train_flag` is set to `0/False` by default, which loads the pre-trained NN parameters from `nn_parameter_offline_unsupervised.mat`. If you want to train your own NN, set `train_flag` to `1/True` and verify the training settings accordingly.
+
 ## Attention
 
 - The `Sensor Fusion and Tracking Toolbox` is required for the CKF implementation.
-- In the training process, the `train_flag` is set to `0/False` by default, which loads the pre-trained NN parameters from `nn_parameter_offline_unsupervised.mat`. If you want to train your own NN, set `train_flag` to `1/True` and verify the training settings accordingly.
+
 
