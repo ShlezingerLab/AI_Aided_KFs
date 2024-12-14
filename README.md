@@ -32,7 +32,7 @@ This work is a collaborative effort by researchers from:
 - Ben-Gurion University, Israel
 - ETH Zürich, Switzerland
 - KTH Royal Institute of Technology, Sweden
-- University of West Bohemia, Czechia
+- University of West Bohemia, Czech Republic
 - Northeastern University, USA
 
 ## Citation
