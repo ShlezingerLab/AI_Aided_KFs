@@ -1,0 +1,4 @@
+__pycache__/
+*.pyc
+*.pyo
+Simulations/Lorenz_Atractor/data/data_gen.pt
