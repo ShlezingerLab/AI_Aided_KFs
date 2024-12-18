@@ -8,7 +8,7 @@ from tqdm import tqdm
 import pandas as pd
 import time
 import sys
-
+from pathlib import Path
 
 # Define the model
 # ======= True Model ======= #
@@ -146,8 +146,10 @@ def h_APBM(x, nn_mlp):
 
 if __name__ == '__main__':
     # Load data
-    DatafileName = 'data/decimated_r0_Ttest3000.pt'
-    [_, _, _, _, test_input, test_target] = torch.load(DatafileName)
+    dataFileName = "dataset/decimated_r0_Ttest3000.pt"
+    dataPath = Path(__file__).resolve().parent.parent.parent / dataFileName
+    print("Reading data from", dataPath, "......")
+    [_, _, _, _, test_input, test_target] = torch.load(dataPath)
     # common settings
     nDataset = 10  # test_input.shape[0]
     nEpoch = test_input.shape[2]

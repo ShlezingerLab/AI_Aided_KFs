@@ -1,10 +1,13 @@
 import numpy as np
 import torch
 import pandas as pd
+from pathlib import Path
 
-# load data
-DatafileName = 'decimated_r0_Ttest3000.pt'
-[train_input, train_target, cv_input_long, cv_target_long, test_input, test_target] = torch.load(DatafileName)
+# Load data
+dataFileName = "dataset/decimated_r0_Ttest3000.pt"
+dataPath = Path(__file__).resolve().parent.parent.parent / dataFileName
+print("Reading data from", dataPath, "......")
+[train_input, train_target, cv_input_long, cv_target_long, test_input, test_target] = torch.load(dataPath)
 
 test_flag = False
 train_flag = True

@@ -9,6 +9,7 @@ from tmlp import MLP
 from tqdm import tqdm
 import time
 import sys
+from pathlib import Path
 
 
 # Define the model
@@ -98,8 +99,10 @@ def h_true(x):
 if __name__ == '__main__':
 
     # Load data
-    DatafileName = 'data/decimated_r0_Ttest3000.pt'
-    [train_y, train_x, cv_input_long, cv_target_long, test_input, test_target] = torch.load(DatafileName)
+    dataFileName = "dataset/decimated_r0_Ttest3000.pt"
+    dataPath = Path(__file__).resolve().parent.parent.parent / dataFileName
+    print("Reading data from", dataPath, "......")
+    [train_y, train_x, cv_input_long, cv_target_long, test_input, test_target] = torch.load(dataPath)
 
     # Prepare the training data
     train_target = train_x[:, :, 1:]  # Target is x_k (k = 1 to 3000)
