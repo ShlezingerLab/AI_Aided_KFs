@@ -1,0 +1,9 @@
+2x2_rq020_T100_randinit.py
+
+m = n = 2, F canonical, H = identity
+
+N_E=1000, N_CV=100, N_T=200 
+
+T= 100, T_test = 100
+
+1/r2 = 0 dB, 1/q2 = 20 dB
